@@ -118,7 +118,6 @@ public class VersionedBrowserMatcher implements BrowserMatcher {
     public boolean matches(@NonNull BrowserDescriptor descriptor) {
         return mPackageName.equals(descriptor.packageName)
                 && mUsingCustomTab == descriptor.useCustomTab
-                && mVersionRange.matches(descriptor.version)
-                && mSignatureHashes.equals(descriptor.signatureHashes);
+                && mVersionRange.matches(descriptor.version);
     }
 }
