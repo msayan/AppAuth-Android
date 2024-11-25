@@ -573,6 +573,7 @@ public class AuthorizationService {
         //Logger.debug("Initiating authorization request to %s"
         //request.configuration.authorizationEndpoint);
 
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
         return intent;
     }
 

@@ -17,15 +17,6 @@ android {
         ]
     }
 
-    signingConfigs {
-        debugAndRelease {
-            storeFile file("${rootDir}/appauth.keystore")
-            storePassword "appauth"
-            keyAlias "appauth"
-            keyPassword "appauth"
-        }
-    }
-
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -33,15 +24,7 @@ android {
 
     lintOptions {
         lintConfig = file("${projectDir}/lint.xml")
-    }
-
-    buildTypes {
-        debug {
-            signingConfig signingConfigs.debugAndRelease
-        }
-        release {
-            signingConfig signingConfigs.debugAndRelease
-        }
+        abortOnError false
     }
 }
 
